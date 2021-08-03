@@ -1,6 +1,6 @@
 # Contatore segnapunti per Windows
 Un semplice programma per contare i punti su Windows.
-##Funzioni
+### Funzioni
 - interfaccia grafica Windows Fonts
 - segnapunti
 - cambio nomi dei giocatori
@@ -10,5 +10,5 @@ Un semplice programma per contare i punti su Windows.
 - gestione font
 - schermo intero
 - reset
-##Dettagli
+### Dettagli
 Programmato con C# in Microsoft Visual Studio 2019 Community.
