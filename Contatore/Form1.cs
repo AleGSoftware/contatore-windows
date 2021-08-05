@@ -19,6 +19,23 @@ namespace Contatore
         public Form1()
         {
             InitializeComponent();
+            string[] args = Environment.GetCommandLineArgs();
+            try
+            {
+                if (args[1] == "/f")
+                {
+                    FormBorderStyle = FormBorderStyle.None;
+                    WindowState = FormWindowState.Maximized;
+                    button9.Visible = true;
+                    checkBox1.Checked = true;
+
+                }
+            }
+            catch
+            {
+
+            }
+            
             startLog();
         }
         
@@ -123,11 +140,13 @@ namespace Contatore
             {
                 FormBorderStyle = FormBorderStyle.None;
                 WindowState = FormWindowState.Maximized;
+                button9.Visible = true;
             }
             if (checkBox1.Checked == false)
             {
                 FormBorderStyle = FormBorderStyle.Sizable;
                 WindowState = FormWindowState.Normal;
+                button9.Visible = false;
             }
         }
         private void playTadaSound()
@@ -202,6 +221,17 @@ namespace Contatore
             Process.Start(Convert.ToString(Path.GetTempPath()) + @"cont\");
             
 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            var ab = new AboutBox1();
+            ab.Show();
         }
     }
 }
