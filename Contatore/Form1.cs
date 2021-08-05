@@ -150,9 +150,10 @@ namespace Contatore
 
         private void button6_Click(object sender, EventArgs e)
         {
+            richTextBox1.Visible = true;
             saveFileDialog1.ShowDialog();
             richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-
+            richTextBox1.Visible = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -183,6 +184,7 @@ namespace Contatore
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Directory.CreateDirectory(Convert.ToString(Path.GetTempPath()) + @"cont");
+            richTextBox1.Visible = true;
             richTextBox1.SaveFile(Convert.ToString(Path.GetTempPath()) + @"cont\log" + DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss") + ".rtf", RichTextBoxStreamType.RichText);
         }
 
