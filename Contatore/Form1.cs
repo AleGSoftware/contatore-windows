@@ -150,10 +150,18 @@ namespace Contatore
 
         private void button6_Click(object sender, EventArgs e)
         {
-            richTextBox1.Visible = true;
-            saveFileDialog1.ShowDialog();
-            richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
-            richTextBox1.Visible = false;
+            try
+            {
+                richTextBox1.Visible = true;
+                saveFileDialog1.ShowDialog();
+                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.RichText);
+                richTextBox1.Visible = false;
+            }
+            catch
+            {
+
+            }
+
         }
 
         private void button7_Click(object sender, EventArgs e)
